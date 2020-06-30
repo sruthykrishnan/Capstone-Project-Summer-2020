@@ -1,3 +1,5 @@
+//Code for testing HC-SR04 ultrasonic sensor with Arduino UNO
+
 //Define Trig an Echo Pin
 #define trigPin 2
 #define echoPin 3

@@ -41,7 +41,7 @@ pin_high (8, 18);
 iolib_delay_ms (2);     //Coil D is energized for 2 millisecond
           i++;
         }
-while (i > 0)           // closewise rotation
+while (i > 0)           // anti-closewise rotation
         {
 PINLOW ();
 pin_high (8, 18);

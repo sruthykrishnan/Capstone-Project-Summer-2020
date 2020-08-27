@@ -141,13 +141,11 @@ LCD_string (const char *buf) // function to send string of data
 void slotcheck()
 {
      counter =3; // counter for parking slots
-/*gps_init();                   // initialize the device
-gps_location(&gps);*/           // determine the location data 
+gps_init();                   // initialize the device
+gps_location(&gps);          // determine the location data 
 char lat[50],log[50];
-long double lati= 43.7441040;
-long double longi= -79.2462439;
-sprintf(lat,"%Lf",lati);
-sprintf(log,"%Lf",longi);
+sprintf(lat,"%Lf",gps.latitude);
+sprintf(log,"%Lf",gps.longitude);
 LCD_cmd(0x01);// clear display
 usleep(1000);
 LCD_cmd(0x80);//Force cursor to beginning ( 1st line)
